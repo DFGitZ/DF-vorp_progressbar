@@ -1,0 +1,110 @@
+@font-face {
+  font-family: rdr;
+  src: url(assets/fonts/rdrlino-regular-webfont.woff);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+#app {
+  font-family: rdr;
+  touch-action: manipulation;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+}
+
+.wrapper {
+  text-align: center;
+  width: 20vw;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.linear-progress {
+  position: fixed; 
+  bottom: 1; 
+  left: 50%; 
+}
+
+.progress-bar-container {
+  border-radius: 4px;
+  background-color: rgba(87, 87, 87, 0.8); 
+  height: 10px; 
+}
+
+.loader {
+  min-width: 0%;
+  height: 100%;
+  width: 0%;
+  background-color: #fff; 
+  border-radius: 4px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between; 
+  margin-bottom: 5px; 
+  pointer-events: none; 
+}
+
+.message {
+  font-size: 14px;
+  text-transform: uppercase; 
+  color: #fff;
+  margin-left: 5px; 
+}
+
+.percentage {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-right: 5px; 
+}
+
+@keyframes growprogress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.circle-progress {
+  position: absolute;
+  bottom: 200px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.568);
+  border-radius: 4px;
+}
+
+.percent {
+  stroke-dasharray: 100;
+  transition: all 1s linear;
+  stroke: var(--maincolor);
+}
+
+.center-count {
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -49%);
+}
+
+@keyframes circleprogress {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 100;
+  }
+}

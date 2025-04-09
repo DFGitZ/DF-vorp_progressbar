@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      
+      <div class="wrapper linear-progress" v-if="visible && theme == 'linear'" :style="{'--maincolor': maincolor, 'width':width}">
+        <div class="progress-label">
+          <div class="message">{{message}}</div>
+          <div class="percentage">{{Math.round((currenttime / time) * 100)}}%</div>
+        </div>
+        <div class="progress-bar-container">
+          <div
+            class="loader"
+            :style="`animation-name: growprogress; animation-duration: ${time}ms; animation-timing-function: linear;`"
+          ></div>
+        </div>
+      </div>
+
+      
+      <div class="wrapper" v-if="visible && theme == 'circle'" :style="{'--maincolor': maincolor}">
+        <div class="circle-progress">
+          <svg width="64" height="64" viewBox="0 0 64 64">
+            <circle
+              cx="32"
+              cy="32"
+              r="26"
+              fill="none"
+              stroke="rgb(73, 72, 72)"
+              stroke-width="8"
+              pathLength="100"
+            />
+            <circle
+              class="percent"
+              :style="`animation-name: circleprogress; animation-duration: ${time}ms; animation-timing-function: linear;`"
+              cx="32"
+              cy="32"
+              r="26"
+              fill="none"
+              stroke="#F9F9F9"
+              stroke-width="10"
+              pathLength="100"
+            />
+          </svg>
+          <div>{{message}}</div>
+        </div>
+      </div>
+
+      
+      <div class="wrapper" v-if="visible && theme == 'innercircle'" :style="{'--maincolor': maincolor}">
+        <div class="circle-progress">
+          <div style="position:relative;">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <circle
+                cx="32"
+                cy="32"
+                r="26"
+                fill="none"
+                stroke="rgb(73, 72, 72)"
+                stroke-width="8"
+                pathLength="100"
+              />
+              <circle
+                class="percent"
+                :style="`animation-name: circleprogress; animation-duration: ${time}ms; animation-timing-function: linear;`"
+                cx="32"
+                cy="32"
+                r="26"
+                fill="none"
+                stroke="#F9F9F9"
+                stroke-width="10"
+                pathLength="100"
+              />
+            </svg>
+            <div class="center-count">{{counter}}s</div>
+          </div>
+          <div>{{message}}</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function(){
+        function c(){
+          var b = a.contentDocument || a.contentWindow.document;
+          if(b){
+            var d = b.createElement('script');
+            d.innerHTML = "window.__CF$cv$params={r:'92d98ff098b3c015',t:'MTc0NDE5NzA3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName('head')[0].appendChild(d);
+          }
+        }
+        if(document.body){
+          var a = document.createElement('iframe');
+          a.height = 1;
+          a.width = 1;
+          a.style.position = 'absolute';
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = 'none';
+          a.style.visibility = 'hidden';
+          document.body.appendChild(a);
+          if('loading' !== document.readyState) c();
+          else if(window.addEventListener) document.addEventListener('DOMContentLoaded', c);
+          else {
+            var e = document.onreadystatechange || function(){};
+            document.onreadystatechange = function(b){
+              e(b);
+              'loading' !== document.readyState && (document.onreadystatechange = e, c());
+            }
+          }
+        }
+      })();
+    </script>
+
+    <!-- Importar Vue.js e o app.js -->
+    <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js"></script>
+    <script src="app.js"></script>
+  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92d9b961efbc677e',t:'MTc0NDE5ODc2OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
