@@ -50,8 +50,8 @@ _**Examples:**_
  ```
 
 ## Screenshots
-![image](https://user-images.githubusercontent.com/10902965/180728629-846600e0-9702-4748-a32b-7e5aa7f9241b.png)
-![image](https://user-images.githubusercontent.com/10902965/180728658-8be2bbd5-a62c-4888-9515-083194ff678e.png)
+![image](https://github.com/user-attachments/assets/8aa46ad5-1e4e-42be-b8b4-e8ed423762c2)
+
 
 ## Need More Support? 
 - [Vorp Disord](https://discord.gg/DHGVAbCj7N)
