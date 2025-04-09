@@ -51,6 +51,7 @@ _**Examples:**_
 
 ## Screenshots
 ![image](https://github.com/user-attachments/assets/8aa46ad5-1e4e-42be-b8b4-e8ed423762c2)
+![image](https://github.com/user-attachments/assets/8f57951b-0a70-49ed-9705-6782341ad2f3)
 
 
 ## Need More Support? 
